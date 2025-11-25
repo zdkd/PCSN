@@ -464,7 +464,6 @@ class RGBDiffusionBranch(nn.Module):
             nn.GroupNorm(8, base_channels * 8),
             nn.SiLU()
         )
-
         # 扩散UNet解码器
         self.up3 = nn.ConvTranspose2d(base_channels * 8, base_channels * 4, 2, stride=2)
         self.up_conv3 = nn.Sequential(
