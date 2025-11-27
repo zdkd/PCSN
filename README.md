@@ -5,22 +5,22 @@
 - 使用分割（segmentation）分支作为条件引导，帮助扩散（diffusion）分支在保持语义一致性的同时更准确地复原被遮挡区域。
 
 数据集结构
-data/ 
-└── split_dataset/ 
-├── train/ 
-│ ├── occluded/ 
-│ ├── complete/ 
-│ └── mask/ 
-│
-├── val/ 
-│ ├── occluded/ 
-│ ├── complete/ 
-│ └── mask/ 
-│ 
-└── test/ 
-├── occluded/ 
-├── complete/ 
-└── mask/ 
+data/
+└── split_dataset/
+    ├── train/                  # 训练集
+    │   ├── occluded/           # 输入：有遮挡的图像 (Input)
+    │   ├── complete/           # 标签：完整的真实图像 (Ground Truth)
+    │   └── mask/               # 辅助：遮挡区域的二值掩码 (Binary Mask)
+    │
+    ├── val/                    # 验证集 (用于训练过程中的模型评估)
+    │   ├── occluded/           # 输入
+    │   ├── complete/           # 标签
+    │   └── mask/               # 辅助
+    │
+    └── test/                   # 测试集 (用于最终性能测试)
+        ├── occluded/           # 输入
+        ├── complete/           # 标签 (用于计算 PSNR/SSIM 指标)
+        └── mask/               # 辅助
 
 
 对外贡献与许可证
