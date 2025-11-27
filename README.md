@@ -5,22 +5,22 @@
 - 使用分割（segmentation）分支作为条件引导，帮助扩散（diffusion）分支在保持语义一致性的同时更准确地复原被遮挡区域。
 
 数据集结构
-data/
-└── split_dataset/
-├── train/
-│ ├── occluded/
-│ ├── complete/
-│ └── mask/
+data/ 
+└── split_dataset/ 
+├── train/ 
+│ ├── occluded/ 
+│ ├── complete/ 
+│ └── mask/ 
 │
-├── val/
-│ ├── occluded/
-│ ├── complete/
-│ └── mask/
-│
-└── test/
-├── occluded/
-├── complete/
-└── mask/
+├── val/ 
+│ ├── occluded/ 
+│ ├── complete/ 
+│ └── mask/ 
+│ 
+└── test/ 
+├── occluded/ 
+├── complete/ 
+└── mask/ 
 
 
 对外贡献与许可证
